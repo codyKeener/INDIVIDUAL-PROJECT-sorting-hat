@@ -8,6 +8,7 @@ const sortMeButton = document.querySelector("#sort-me-button")
 const hogwartsStudents = document.querySelector("#hogwarts-students")
 const voldysArmy = document.querySelector("#voldys-army")
 const form = document.querySelector("form")
+const sortingButtonsContainer = document.querySelector("#sorting-buttons-container")
 
 //function that hides the Sorting Hat card and displays the main page
 const startApp = () => {
@@ -39,7 +40,7 @@ const studentArray = [
   {
     id: 4,
     name: "Draco",
-    house: "Syltherin"
+    house: "Slytherin"
   }
 ]
 
@@ -102,3 +103,23 @@ const createNewCard = (e) => {
 
 //event listener on the Sort Me button that calls the renderCards function
 form.addEventListener("submit", createNewCard)
+
+//function that filters the cards in the hogwartsStudents div
+const filterCards = (e) => {
+  [, buttonHouse] = e.target.id.split("-")
+  
+  const filteredArray = []
+
+  studentArray.forEach(student => {
+    if (buttonHouse === "all") {
+      filteredArray.push(student)
+    } else if (student.house.toLowerCase() === buttonHouse) {
+      filteredArray.push(student)
+    }
+  })
+
+  renderCards(filteredArray, hogwartsStudents)
+}
+
+//event listener for the sorting-buttons-container div that calls the filterCards function
+sortingButtonsContainer.addEventListener("click", filterCards)
