@@ -7,12 +7,13 @@ const getSortedButton = document.querySelector("#get-sorted-button")
 const sortMeButton = document.querySelector("#sort-me-button")
 const hogwartsStudents = document.querySelector("#hogwarts-students")
 const voldysArmy = document.querySelector("#voldys-army")
+const form = document.querySelector("form")
 
 //function that hides the Sorting Hat card and displays the main page
 const startApp = () => {
   sortingHatContainer.toggleAttribute("hidden")
   mainPageContainer.toggleAttribute("hidden")
-  // renderCards(studentArray, hogwartsStudents)
+  renderCards(studentArray, hogwartsStudents)
 }
 
 //event listener for the Get Sorted button that calls the startApp function
@@ -83,5 +84,21 @@ const randomHouse = () => {
   return house
 }
 
-//event listener on the Sort Me button that calls the renderCards function - function is getting called without clicking the button, need to figure that out
-// sortMeButton.addEventListener("click", renderCards(studentArray, hogwartsStudents))
+//function that creates a new card and adds it to the hogwartsStudents array
+const createNewCard = (e) => {
+  e.preventDefault()
+
+  const newStudentObj = 
+    {
+      id: studentArray.length + 1,
+      name: document.querySelector("#nameInput").value,
+      house: randomHouse(),
+    }
+  
+  studentArray.push(newStudentObj)
+  form.reset()
+  renderCards(studentArray, hogwartsStudents)
+}
+
+//event listener on the Sort Me button that calls the renderCards function
+form.addEventListener("submit", createNewCard)
