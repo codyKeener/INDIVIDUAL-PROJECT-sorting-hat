@@ -1,4 +1,4 @@
-console.log("Ur a wizard, Harry!")
+console.log("Yer a wizard, Harry!")
 
 //target all elements of the DOM
 const sortingHatContainer = document.querySelector("#sorting-hat-container")
@@ -123,3 +123,25 @@ const filterCards = (e) => {
 
 //event listener for the sorting-buttons-container div that calls the filterCards function
 sortingButtonsContainer.addEventListener("click", filterCards)
+
+//empty array for voldys army
+const voldysArmyArray = []
+
+//function to make Expel button delete card from the hogwartsStudents div and add it to the voldysArmy div
+const expel = (e) => {
+  if (e.target.id.includes("expel")) {
+    const [, expelId] = e.target.id.split("--")
+    const index = studentArray.findIndex((student) => student.id === Number(expelId))
+
+    const newVoldyObj = studentArray[index]
+    voldysArmyArray.push(newVoldyObj)
+    
+    studentArray.splice(index, 1)
+    
+    renderCards(voldysArmyArray, voldysArmy)
+    renderCards(studentArray, hogwartsStudents)
+  }
+}
+
+//event listener for Expel buttons
+mainPageContainer.addEventListener("click", expel)

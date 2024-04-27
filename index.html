@@ -25,16 +25,18 @@
         <p>In which house do you belong? Enter your name below to find out!</p>
       </div>
       <div id="form-container">
+        <h3 id="form-header">What is the new student's name?</h3>
         <form>
           <div class="mb-3">
             <label for="exampleInput" class="form-label">Name</label>
-            <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp">
+            <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" required>
             <div id="nameHelp" class="form-text">Enter your name and click "Sort Me!" to be sorted into a House</div>
           </div>
           <button type="submit" class="btn btn-primary" id="sort-me-button">Sort Me!</button>
         </form>
       </div>
       <div id="sorting-buttons-container">
+        <h3 id="sorting-buttons-header">Filter Students</h3>
         <button id="filter-all">All</button>
         <button id="filter-gryffindor">Gryffindor</button>
         <button id="filter-hufflepuff">Hufflepuff</button>
@@ -42,11 +44,17 @@
         <button id="filter-slytherin">Slytherin</button>
       </div>
       <div id="card-containers">
-        <div id="hogwarts-students">
-          
+        <div id="student-container">
+          <h3 id="hogwarts-students-header">Hogwarts Students</h3>
+          <div id="hogwarts-students">
+            
+          </div>
         </div>
-        <div id="voldys-army">
-          
+        <div id="voldy-container">
+          <h3 id="voldys-army-header">Voldy's Army</h3>
+          <div id="voldys-army">
+        
+          </div>
         </div>
       </div>
     </div>
