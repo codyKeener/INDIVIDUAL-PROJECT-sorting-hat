@@ -61,5 +61,27 @@ const renderCards = (array, divId) => {
   divId.innerHTML = domString
 }
 
+// function that generates a random House
+const randomHouse = () => {
+  let randomNumber = Math.ceil((Math.random() * 4))
+  let house = ""
+
+  switch (randomNumber) {
+    case 1:
+      house = "Gryffindor";
+      break
+    case 2:
+      house = "Hufflepuff";
+      break
+    case 3:
+      house = "Ravenclaw";
+      break
+    case 4:
+      house = "Slytherin";
+      break
+  }
+  return house
+}
+
 //event listener on the Sort Me button that calls the renderCards function - function is getting called without clicking the button, need to figure that out
 // sortMeButton.addEventListener("click", renderCards(studentArray, hogwartsStudents))
