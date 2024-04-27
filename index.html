@@ -11,7 +11,7 @@
   <div id="app-container">
     <div id="sorting-hat-container">
       <div class="card" style="width: 18rem;" id="sorting-hat-card">
-        <img src="images/wizard-hat.png" class="card-img-top" alt="...">
+        <img src="images/wizard-hat.png" class="card-img-top" alt="The Sorting Hat!">
         <div class="card-body">
           <h5 class="card-title">Welcome to Hogwarts!</h5>
           <p class="card-text">I am the Sorting Hat. Place me on your head to find out in which house you belong!</p>
@@ -20,7 +20,35 @@
       </div>
     </div>
     <div id="main-page-container" hidden>
-      <p>testing 1 2 3</p>
+      <div id="header">
+        <h1 id="welcome">Welcome to Hogwarts!</h1>
+        <p>In which house do you belong? Enter your name below to find out!</p>
+      </div>
+      <div id="form-container">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInput" class="form-label">Name</label>
+            <input type="text" class="form-control" id="exampleInput" aria-describedby="emailHelp">
+            <div id="nameHelp" class="form-text">Enter your name and click "Sort Me!" to be sorted into a House</div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="sort-me-button">Sort Me!</button>
+        </form>
+      </div>
+      <div id="sorting-buttons-container">
+        <button id="filter-all">All</button>
+        <button id="filter-gryffindor">Gryffindor</button>
+        <button id="filter-hufflepuff">Hufflepuff</button>
+        <button id="filter-ravenclaw">Ravenclaw</button>
+        <button id="filter-slytherin">Slytherin</button>
+      </div>
+      <div id="card-containers">
+        <div id="hogwarts-students">
+          <div class="test">Hogwarts Students</div>
+        </div>
+        <div id="voldys-army">
+          <div class="test">Voldy's Army</div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="main.js"></script>
