@@ -14,7 +14,7 @@
       <div class="card-body">
         <h5 class="card-title">Welcome to Hogwarts!</h5>
         <p class="card-text">I am the Sorting Hat. Place me on your head to find out in which house you belong!</p>
-        <a href="#" class="btn btn-primary" id="get-sorted-button">Get Sorted</a>
+        <a href="#" class="btn btn-primary button-btn" id="get-sorted-button">Get Sorted</a>
       </div>
     </div>
   </div>
@@ -30,29 +30,30 @@
           <div class="mb-3">
             <label for="exampleInput" class="form-label">Name</label>
             <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp" required>
-            <div id="nameHelp" class="form-text">Enter your name and click "Sort Me!" to be sorted into a House</div>
+            <button type="submit" class="btn btn-primary button-btn" id="sort-me-button">Sort Me!</button>
           </div>
-          <button type="submit" class="btn btn-primary" id="sort-me-button">Sort Me!</button>
         </form>
       </div>
-      <div id="sorting-buttons-container">
+      <div id="filter-container">
         <h3 id="sorting-buttons-header">Filter Students</h3>
-        <button id="filter-all">All</button>
-        <button id="filter-gryffindor">Gryffindor</button>
-        <button id="filter-hufflepuff">Hufflepuff</button>
-        <button id="filter-ravenclaw">Ravenclaw</button>
-        <button id="filter-slytherin">Slytherin</button>
+        <div id="sorting-buttons-container">
+          <button class="filter-button" id="filter-all">All</button>
+          <button class="filter-button" id="filter-gryffindor">Gryffindor</button>
+          <button class="filter-button" id="filter-hufflepuff">Hufflepuff</button>
+          <button class="filter-button" id="filter-ravenclaw">Ravenclaw</button>
+          <button class="filter-button" id="filter-slytherin">Slytherin</button>
+        </div>
       </div>
       <div id="card-containers">
         <div id="student-container">
           <h3 id="hogwarts-students-header">Hogwarts Students</h3>
-          <div id="hogwarts-students">
+          <div class="card-container" id="hogwarts-students">
             
           </div>
         </div>
         <div id="voldy-container">
           <h3 id="voldys-army-header">Voldy's Army</h3>
-          <div id="voldys-army">
+          <div class="card-container" id="voldys-army">
         
           </div>
         </div>
