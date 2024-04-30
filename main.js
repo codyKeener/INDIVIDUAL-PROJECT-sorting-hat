@@ -48,18 +48,35 @@ const studentArray = [
 const renderCards = (array, divId) => {
   let domString = ""
 
-  array.forEach(item => {
-    domString += `
-    <div class="card">
-      <div class="card-header">${item.house}</div>
-      <div class="card-body">
-        <h5 class="card-title">${item.name}</h5>
-        <a href="#" class="btn btn-primary" id="expel--${item.id}">Expel</a>
-      </div>
-    </div>
-    `
-  })
+  //got this double sort method from https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields
+  array.sort((a, b) => a.house.localeCompare(b.house) || a.name.localeCompare(b.name))
 
+  if (divId === hogwartsStudents) {
+    array.forEach(item => {
+      domString += `
+      <div class="card student-card ${item.house}-card">
+        <img src="images/${item.house}.png" class="card-img-top" alt="House Logo">
+        <div class="card-header ${item.house}-header">${item.house}</div>
+        <div class="card-body">
+          <h5 class="card-title">${item.name}</h5>
+          <a href="#" class="btn btn-primary expel-btn" id="expel--${item.id}">Expel</a>
+        </div>
+      </div>
+      `
+    })
+  } else if (divId === voldysArmy) {
+    array.forEach(item => {
+      domString += `
+      <div class="card student-card deatheater-card">
+        <img src="images/death-eater.png" class="card-img-top" alt="Death Eater">
+        <div class="card-header deatheater-header">Death Eater</div>
+        <div class="card-body deatheater-card-body">
+          <p class="card-text">Sadly, <strong>${item.name}</strong> has gone over to the dark side!</p>
+        </div>
+      </div>
+      `
+    })
+  }
   divId.innerHTML = domString
 }
 

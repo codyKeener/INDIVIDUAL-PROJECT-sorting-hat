@@ -4,6 +4,8 @@ body {
   background-size: cover;
 }
 
+/* main containers */
+
 #sorting-hat-container {
   display: flex;
   justify-content: center;
@@ -17,7 +19,7 @@ body {
 }
 
 #app-container {
-  width: 100%;
+  min-width: 600px;
   display: flex;
   justify-content: center;
 }
@@ -28,25 +30,254 @@ body {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 90%;
+  width: 80%;
+  height: 100%;
   background-color: rgb(206, 206, 206, 0.5);
   border-radius: 20px;
+  padding-bottom: 20px;
 }
+
+/* header */
 
 #main-page-header {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
-  border-bottom: 1px dotted black;
+  padding: 20px 20px 0;
+  border-bottom: 1px dotted rgb(33, 0, 70);
   margin-bottom: 20px;
 }
 
+/* form */
+
 #form-container {
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 5px;
+}
+
+.mb-3 {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-label {
+  margin-bottom: 0px;
+  font-size: 25px;
+}
+
+#nameInput {
+  font-size: 25px;
+}
+
+#sort-me-button {
+  width: 300px;
+  font-size: 25px;
+}
+
+/* filter section */
+
+#filter-container {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
 }
 
 #sorting-buttons-container {
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* card section */
+
+#card-containers {
+  display: flex;
+  width: 90%;
+}
+
+#student-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  border-right: 1px dotted rgb(33, 0, 70);
+}
+
+#hogwarts-students {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding-right:20px;
+  gap: 20px;
+}
+
+#voldy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+#voldys-army {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding-left:20px;
+  gap: 20px;
+}
+
+/* buttons */
+
+.btn-primary {
+  border: 1px solid black;
+}
+
+.btn-primary:active {
+  opacity: 1;
+}
+
+.filter-button {
+  font-size: 30px;
+  width: 400px;
+  flex: 1 1 0;
+}
+
+#filter-all {
+  background-color: rgba(58, 57, 62);
+  color:rgba(191, 138, 5);
+  transition: 3s;
+}
+
+.button-btn {
+  background-color: rgba(191, 138, 5, 0.9);
+  transition: 1.5s;
+}
+
+.button-btn:hover {
+  background-color: rgba(191, 138, 5, 0.2);
+  border: 1px solid black;
+}
+
+.expel-btn {
+  background-color: rgba(191, 138, 5);
+  border: 1px solid black;
+  transition: 1.5s;
+}
+
+.expel-btn:hover {
+  color: rgb(245, 38, 76);
+  background-color: rgba(191, 138, 5, 1);
+  opacity: 1;
+  /* transition-duration: 1.5s; */
+  border: 1px solid black;
+}
+
+/* cards */
+
+#sorting-hat-card {
+  background-color: rgba(48, 0, 115, 0.7);
+  color: #e4dbf2;
+  transition: 3s;
+}
+
+#sorting-hat-card:hover {
+  background-color: rgba(48, 0, 115, 0.1);
+}
+
+.card-header {
+  text-align: center;
+}
+
+.student-card {
+  width: 250px;
+  height: 425px;
   margin-bottom: 20px;
+}
+
+.Gryffindor-card, #filter-gryffindor {
+  background-color: #ae0001;
+  color: #d3a625;
+  transition: 3s;
+}
+
+.Gryffindor-header {
+  background-color: #740001;
+  color: #eeba30;
+}
+
+.Hufflepuff-card, #filter-hufflepuff {
+  background-color: #f0c75e;
+  color: #372e29;
+  transition: 3s;
+}
+
+.Hufflepuff-header {
+  background-color: #ecb939;
+  color: #726255;
+}
+
+.Ravenclaw-card, #filter-ravenclaw {
+  background-color: #222f5b;
+  color: #946b2d;
+  transition: 3s;
+}
+
+.Ravenclaw-header {
+  background-color: #0e1a40;
+  color: #bebebe;
+}
+
+.Slytherin-card, #filter-slytherin {
+  background-color: #2a623d;
+  color: #000000;
+  transition: 3s;
+}
+
+.Slytherin-header {
+  background-color: #1a472a;
+  color: #aaaaaa;
+}
+
+/* hover effects for cards*/
+
+.Gryffindor-card:hover, #filter-gryffindor:hover, .Hufflepuff-card:hover, #filter-hufflepuff:hover, .Ravenclaw-card:hover, #filter-ravenclaw:hover, .Slytherin-card:hover, #filter-slytherin:hover, #filter-all:hover {
+  opacity: 0.5;
+}
+
+/* death eater cards */
+
+.deatheater-card {
+  border: 1px solid black;
+  height: max-content;
+}
+
+.deatheater-header {
+  background-color: #000000;
+  color: #aaaaaa;
+}
+
+.deatheater-card-body {
+  background-color: #393939;
+  color: #aaaaaa;
+  text-align: center;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  flex: 0 1 0;
 }
