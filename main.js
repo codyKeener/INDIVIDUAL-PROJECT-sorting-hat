@@ -126,7 +126,8 @@ const createNewCard = (e) => {
   
   studentArray.push(newStudentObj)
   form.reset()
-  renderCards(studentArray, hogwartsStudents)
+  // renderCards(studentArray, hogwartsStudents)
+  filterCards(currentFilter)
 }
 
 //event listener on the Sort Me button that calls the renderCards function
