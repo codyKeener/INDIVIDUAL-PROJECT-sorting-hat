@@ -1,7 +1,16 @@
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-image: url(images/night-castle.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0px;
 }
 
 /* main containers */
@@ -22,6 +31,14 @@ body {
   min-width: 600px;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #app-container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 #main-page-container {
