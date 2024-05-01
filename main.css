@@ -202,7 +202,19 @@ body {
   color: rgb(245, 38, 76);
   background-color: rgba(191, 138, 5, 1);
   opacity: 1;
-  /* transition-duration: 1.5s; */
+  border: 1px solid black;
+}
+
+.readmit-btn {
+  background-color: rgba(191, 138, 5);
+  border: 1px solid black;
+  transition: 1.5s;
+}
+
+.readmit-btn:hover {
+  color: rgb(100, 38, 245);
+  background-color: rgba(191, 138, 5, 1);
+  opacity: 1;
   border: 1px solid black;
 }
 
@@ -274,7 +286,7 @@ body {
 
 /* hover effects for cards*/
 
-.Gryffindor-card:hover, #filter-gryffindor:hover, .Hufflepuff-card:hover, #filter-hufflepuff:hover, .Ravenclaw-card:hover, #filter-ravenclaw:hover, .Slytherin-card:hover, #filter-slytherin:hover, #filter-all:hover {
+.Gryffindor-card:hover, #filter-gryffindor:hover, .Hufflepuff-card:hover, #filter-hufflepuff:hover, .Ravenclaw-card:hover, #filter-ravenclaw:hover, .Slytherin-card:hover, #filter-slytherin:hover, #filter-all:hover, .deatheater-card:hover {
   opacity: 0.5;
 }
 
@@ -283,6 +295,7 @@ body {
 .deatheater-card {
   border: 1px solid black;
   height: max-content;
+  transition: 3s;
 }
 
 .deatheater-header {

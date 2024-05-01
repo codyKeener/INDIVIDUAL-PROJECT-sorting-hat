@@ -82,7 +82,7 @@ const renderCards = (array, divId) => {
         <div class="card-header deatheater-header">Death Eater</div>
         <div class="card-body deatheater-card-body">
           <p class="card-text">Sadly, <strong>${item.name}</strong> has gone over to the dark side!</p>
-          <a href="#" class="btn btn-primary expel-btn" id="readmit--${item.id}">Readmit</a>
+          <a href="#" class="btn btn-primary readmit-btn" id="readmit--${item.id}">Readmit</a>
         </div>
       </div>
       `
