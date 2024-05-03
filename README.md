@@ -4,7 +4,7 @@
 
 Welcome to Hogwarts! You are a first year student at the prestigous Hogwarts school of witchcraft and wizardry, but before you can begin classes, you must first be sorted into a school house! Put on the Sorting Hat and find out in which house you belong. Then have fun sorting your friends, pets, and enemies and then expelling those who don't deserve to be at Hogwarts! But be careful, because those expelled students will end up in Voldy's Army! But don't worry, if it turns out they were actually a good guy all along and they <em>always</em> loved your mother, you can readmit them back into Hogwarts.
 
-[View App](#your-link)
+[View App](#https://sorting-hat-cody-keener.netlify.app)
 
 ## Get Started
 //function that hides the Sorting Hat card and displays the main page
@@ -27,16 +27,16 @@ const startApp = () => {
 - A separate container holds cards for students that have been expelled and joined Voldy's Army. These cards are styled with a different image and different colors from the Hogwarts students.
 - I also added a 'Readmit' button that moves an expelled student back to the Hogwarts Students container with their original house.
 
-## Video Walkthrough of APP NAME
+## Video Walkthrough of Sorting Hat
 https://www.loom.com/share/54cdd430ea944737801eaf62ea0ad5cd?sid=d3e6aeb1-a4ec-45ed-8dd9-13cb7d23877e
 
 ## Relevant Links
 - [Check out the deployed site](#https://sorting-hat-cody-keener.netlify.app/#)
 
 ## Code Snippet 
-//function to make Expel button delete card from the hogwartsStudents div and add it to the voldysArmy div
-const expel = (e) => {
+<!-- //function to make Expel button delete card from the hogwartsStudents div and add it to the voldysArmy div -->
 
+const expel = (e) => {
   if (e.target.id.includes("expel")) {
     e.preventDefault()
     
