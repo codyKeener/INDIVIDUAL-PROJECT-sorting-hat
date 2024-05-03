@@ -1,33 +1,12 @@
 # Sorting Hat
 
-# This is the name of my Project  [![Netlify Status](https://api.netlify.com/api/v1/badges/4ab7e730-7ed3-4cfd-a988-66195e79a991/deploy-status)](https://app.netlify.com/sites/drt-sortinghat/deploys)
-<!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2ccba9e-8170-4ac8-9165-a2b58850a6ce/deploy-status)](https://app.netlify.com/sites/sorting-hat-cody-keener/deploys)(https://app.netlify.com/sites/sorting-hat-cody-keener/deploys)
 
-Here I am putting an overview of what my project is about. It comes below the name of my project so that others can read what it is about and get more details.
+Welcome to Hogwarts! You are a first year student at the prestigous Hogwarts school of witchcraft and wizardry, but before you can begin classes, you must first be sorted into a school house! Put on the Sorting Hat and find out in which house you belong. Then have fun sorting your friends, pets, and enemies and then expelling those who don't deserve to be at Hogwarts! But be careful, because those expelled students will end up in Voldy's Army! But don't worry, if it turns out they were actually a good guy all along and they <em>always</em> loved your mother, you can readmit them back into Hogwarts.
 
 [View App](#your-link)
 
-## Get Started <!-- OPTIONAL, but doesn't hurt -->
-PLACE CODE SNIPPET HERE
-
-## About the User <!-- This is a scaled down user persona -->
-- The ideal user for this application is a teacher
-- They have students in their classrooms that they would like to put into random groups and they have a love and passion of Harry Potter
-- The problem this app solves for them is it allows them to get their students involved and excited about being in random groups. The students have felt that the groups have not been so random and based on favorites.
-
-## Features <!-- List your app features using bullets! Do NOT use a paragraph. No one will read that! -->
-- When a new student is added an object should be created and that object should be pushed into an array of students that then prints to the DOM.
-- House Colors: The color of the student's card changes depending on which house they were sorted.
-- Card Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
-- Voldermort's Army: Create a separate container of cards that hold the cards for students that have been expelled. These should be styled differently from Hogwarts students.
-
-## Video Walkthrough of APP NAME <!-- A loom link is sufficient -->
-https://www.loom.com/share/829b90d831ea441ba2db6bea724af210
-
-## Relevant Links <!-- Link to all the things that are required outside of the ones that have their own section -->
-- [Check out the deployed site](#https://sorting-hat-cody-keener.netlify.app/#)
-
-## Code Snippet 
+## Get Started
 //function that hides the Sorting Hat card and displays the main page
 const startApp = () => {
   sortingHatContainer.toggleAttribute("hidden")
@@ -35,8 +14,48 @@ const startApp = () => {
   renderCards(studentArray, hogwartsStudents)
 }
 
+## About the User
+- The ideal user for this application is a Harry Potter fan
+- They want to know what Hogwarts House they and their friends (or pets) would be in
+- The problem this app solves for them is that it allows them to be sorted into a Hogwarts house, sort their friends, and expel their enemies
+
+## Features
+- Click the 'Get Sorted' button to be taken to the main application
+- Type in a name and click 'Sort Me!' to be sorted into a house and have your card appear in the Hogwarts Students container.
+- The color of the student's card changes depending on which house they were sorted, and each house has their own image as well.
+- The student cards are ordered alphabetically by house and then by name within each house.
+- A separate container holds cards for students that have been expelled and joined Voldy's Army. These cards are styled with a different image and different colors from the Hogwarts students.
+- I also added a 'Readmit' button that moves an expelled student back to the Hogwarts Students container with their original house.
+
+## Video Walkthrough of APP NAME
+https://www.loom.com/share/54cdd430ea944737801eaf62ea0ad5cd?sid=d3e6aeb1-a4ec-45ed-8dd9-13cb7d23877e
+
+## Relevant Links
+- [Check out the deployed site](#https://sorting-hat-cody-keener.netlify.app/#)
+
+## Code Snippet 
+//function to make Expel button delete card from the hogwartsStudents div and add it to the voldysArmy div
+const expel = (e) => {
+
+  if (e.target.id.includes("expel")) {
+    e.preventDefault()
+    
+    const [, expelId] = e.target.id.split("--")
+    const index = studentArray.findIndex((student) => student.id === Number(expelId))
+
+    const newVoldyObj = studentArray[index]
+    console.log(newVoldyObj)
+    voldysArmyArray.push(newVoldyObj)
+    
+    studentArray.splice(index, 1)
+    
+    renderCards(voldysArmyArray, voldysArmy)
+    filterCards(currentFilter)
+  }
+}
+
 ## Project Screenshots
-<img width="1148" alt="Your Alt" src="images/sorting-hat-app.png">
+<img width="1148" alt="Screenshot of my Sorting Hat app" src="images/sorting-hat-app.png">
 
 ## Contributors
 - Cody Keener (https://github.com/codyKeener)
