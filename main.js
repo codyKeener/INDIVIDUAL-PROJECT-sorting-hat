@@ -9,6 +9,8 @@ const hogwartsStudents = document.querySelector("#hogwarts-students")
 const voldysArmy = document.querySelector("#voldys-army")
 const form = document.querySelector("form")
 const sortingButtonsContainer = document.querySelector("#sorting-buttons-container")
+const sortingHatImage = document.querySelector("#sorting-hat-div-img")
+const formContainer = document.querySelector("#form-container")
 
 //function that hides the Sorting Hat card and displays the main page
 const startApp = () => {
@@ -19,6 +21,15 @@ const startApp = () => {
 
 //event listener for the Get Sorted button that calls the startApp function
 getSortedButton.addEventListener("click", startApp)
+
+//function that displays the form
+const showForm = () => {
+  // sortingHatImage.toggleAttribute("hidden")
+  formContainer.toggleAttribute("hidden")
+}
+
+//event listener for the Sorting Hat image that calls the showForm function
+sortingHatImage.addEventListener("click", showForm)
 
 //function that returns a random id number
 const randomId = () => {
