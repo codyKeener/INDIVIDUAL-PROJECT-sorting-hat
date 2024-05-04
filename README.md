@@ -28,7 +28,7 @@ const startApp = () => {
 - I also added a 'Readmit' button that moves an expelled student back to the Hogwarts Students container with their original house.
 
 ## Video Walkthrough of Sorting Hat
-https://www.loom.com/share/54cdd430ea944737801eaf62ea0ad5cd?sid=d3e6aeb1-a4ec-45ed-8dd9-13cb7d23877e
+https://www.loom.com/share/c38f008044a146008871ae626a0004f0?sid=90cc8557-12d7-41b2-946c-3990534822c3
 
 ## Relevant Links
 - [Check out the deployed site](#https://sorting-hat-cody-keener.netlify.app/#)
