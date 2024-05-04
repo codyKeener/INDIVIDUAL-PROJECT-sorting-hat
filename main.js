@@ -47,6 +47,21 @@ const studentArray = [
     id: randomId(),
     name: "Draco",
     house: "Slytherin"
+  },
+  {
+    id: randomId(),
+    name: "Cedric",
+    house: "Hufflepuff"
+  },
+  {
+    id: randomId(),
+    name: "Luna",
+    house: "Ravenclaw"
+  },
+  {
+    id: randomId(),
+    name: "Snape",
+    house: "Slytherin"
   }
 ]
 
@@ -62,7 +77,7 @@ const renderCards = (array, divId) => {
     array.forEach(item => {
       domString += `
       <div class="card student-card ${item.house}-card">
-        <img src="images/${item.house}.png" class="card-img-top" alt="House Logo">
+        <img src="images/${item.house}.png" class="card-img-top ${item.house}-img" alt="House Logo">
         <div class="card-header ${item.house}-header">${item.house}</div>
         <div class="card-body">
           <h5 class="card-title">${item.name}</h5>
