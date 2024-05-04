@@ -66,6 +66,21 @@ body {
   margin-bottom: 20px;
 }
 
+#main-page-header p {
+  font-size: 24px;
+}
+
+/* sorting hat image */
+
+#sorting-hat-div-img {
+  width: 400px;
+  transition: 1s;
+}
+
+#sorting-hat-div-img:hover {
+  transform: translate(0px, -15px);
+}
+
 /* form */
 
 #form-container {
@@ -228,6 +243,14 @@ body {
 
 #sorting-hat-card:hover {
   background-color: rgba(48, 0, 115, 0.1);
+}
+
+#sorting-hat-card-img {
+  transition: 1s;
+}
+
+#sorting-hat-card-img:hover {
+  transform: translate(0px, -8px);
 }
 
 .card-header {
