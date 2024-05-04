@@ -246,7 +246,7 @@ body {
 }
 
 #sorting-hat-card-img {
-  transition: all ease all ease 1s;
+  transition: all ease 1s;
 }
 
 #sorting-hat-card-img:hover {
